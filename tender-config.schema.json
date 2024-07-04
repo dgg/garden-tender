@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "dgg:garden-tender:configuration",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "exemptions"
+    ],
+    "properties": {
+        "exemptions": {
+            "type": "object",
+            "additionalProperties": {
+                "type": "object",
+                "required": [
+                    "current",
+                    "latest"
+                ],
+                "properties": {
+                    "current": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "latest": {
+                        "type": "string",
+                        "minLength": 1
+                    },
+                    "reason": {
+                        "type": "string",
+                        "minLength": 1
+                    }
+                }
+            }
+        }
+    }
+}
