@@ -4,9 +4,13 @@
     "type": "object",
     "additionalProperties": false,
     "required": [
+        "root",
         "exemptions"
     ],
     "properties": {
+        "root": {
+            "type": "boolean"
+        },
         "exemptions": {
             "type": "object",
             "additionalProperties": {
